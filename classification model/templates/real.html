@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HEALTH CARE</title>
+</head>
+<body>
+<h1>HEALTH CARE PREDICTION</h1>
+<h2>Enter The Data:</h2>
+<form action="{{ url_for("predict")}}" method="post">
+
+    <p>ENTER THE AGE:</p>
+    <input type="number" id="age" name="age" min=0 max=100><br><br>
+
+    <label for="Gender">Select your gender:</label>
+    <select id="Gender" name="Gender">
+        <option value=1>Male</option>
+        <option value=0>Female</option>
+    </select><br><br>
+
+    <label for="Blood Type">Select your blood group :</label>
+    <select id="Blood Type" name="Blood Type">
+        <option value=0>A+</option>
+        <option value=1>A-</option>
+        <option value=2>AB+</option>
+        <option value=3>AB-</option>
+        <option value=4>B+</option>
+        <option value=5>B-</option>
+        <option value=6>O+</option>
+        <option value=7>O-</option>
+    </select><br><br>
+
+    <label for="Medical Condition">Select your medical condition :</label>
+    <select id="Medical Condition" name="Medical Condition">
+        <option value=0>Arthritis</option>
+        <option value=1>Asthma</option>
+        <option value=2>Cancer</option>
+        <option value=3>Diabetes</option>
+        <option value=4>Hypertension</option>
+        <option value=5>Obesity</option>
+    </select><br><br>
+
+    <label for="Insurance Provider">Select your insurance provider :</label>
+    <select id="Insurance Provider" name="Insurance Provider">
+        <option value=0>Aetna</option>
+        <option value=1>Blue Cross</option>
+        <option value=2>Cigna</option>
+        <option value=3>Medicare</option>
+        <option value=4>UnitedHealthcare</option>
+    </select><br><br>
+
+    <p>Enter the billing amount:</p>
+    <input type="number" id="Billing Amount" name="Billing Amount" step="0.0001"><br><br>
+
+    <label for="Admission Type">Select your insurance provider :</label>
+    <select id="Admission Type" name="Admission Type">
+        <option value=0>Elective</option>
+        <option value=1>Emergency</option>
+        <option value=2>Urgent</option>
+    </select><br><br>
+
+    <label for="Medication">Select your medication :</label>
+    <select id="Medication" name="Medication">
+        <option value=0>Aspirin</option>
+        <option value=1>Ibuprofen</option>
+        <option value=2>Lipitor</option>
+        <option value=3>Paracetamol</option>
+        <option value=4>Penicillin</option>
+    </select><br><br>
+
+    <input type="submit" value="Predict"><br><br>
+
+    {{ prediction_text }}
+</form>
+
+</body>
+</html>

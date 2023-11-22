@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>WINE QUALITY</title>
+
+</head>
+<body>
+
+
+<h1>Wine Quality Prediction</h1>
+
+<h2>Enter the data:</h2>
+
+<form action="{{ url_for('predict')}}" method="post">
+
+    <p>ENTER FIXED ACIDITY:</p>
+    <input type="number" id="fixed acidity" name="fixed acidity" step="0.01"><br><br>
+
+    <p>ENTER VOLATILE ACIDITY:</p>
+    <input type="number" id="volatile acidity" name="volatile acidity" step="0.001"><br><br>
+
+    <p>ENTER CITRIC ACID:</p>
+    <input type="number" id="citric acid" name="citric acid" step="0.01"><br><br>
+
+    <p>ENTER RESIDUAL SUGAR:</p>
+    <input type="number" id="residual sugar" name="residual sugar" step="0.01"><br><br>
+
+    <p>ENTER CHLORIDES:</p>
+    <input type="number" id="chlorides" name="chlorides" step="0.001"><br><br>
+
+    <p>ENTER FREE SULFUR DIOXIDE:</p>
+    <input type="number" id="free sulfur dioxide" name="free sulfur dioxide" step="0.01"><br><br>
+
+    <p>ENTER TOTAL SULFUR DIOXIDE:</p>
+    <input type="number" id="total sulfur dioxide" name="total sulfur dioxide" step="0.01"><br><br>
+
+    <p>ENTER  DENSITY:</p>
+    <input type="number" id="density" name="density" step="0.00001"><br><br>
+
+    <p>ENTER pH:</p>
+    <input type="number" id="pH" name="pH" step="0.01"><br><br>
+
+    <p>ENTER SULPHATES:</p>
+    <input type="number" id="sulphates" name="sulphates" step="0.01"><br><br>
+
+    <p>ENTER ALCOHOL:</p>
+    <input type="number" id="alcohol" name="alcohol" step="0.01"><br><br>
+
+    <input type="submit" value="Predict">
+
+    <br><br>
+
+    {{ prediction_text }}
+
+
+
+
+</form>
+
+</body>
+</html>
